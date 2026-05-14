@@ -1,0 +1,24 @@
+:root {
+  --bg-main: #0f172a;
+  --bg-secondary: #111827;
+  --bg-card: rgba(30, 41, 59, 0.72);
+
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-soft: #cbd5e1;
+
+  --primary: #6366f1;
+  --secondary: #8b5cf6;
+
+  --border-color: rgba(148, 163, 184, 0.16);
+
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+
+  --shadow-card:
+    0 10px 30px rgba(0, 0, 0, 0.24);
+
+  --transition:
+    all 0.25s ease;
+}
