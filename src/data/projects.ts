@@ -67,7 +67,7 @@ export const projects: ProjectItem[] = [
     subtitle: 'Prototype SaaS administratif',
     type: 'Projet personnel',
     image: '/images/projects/djcitoyen.png',
-    demoUrl: '#',
+    demoUrl: 'https://djicitoyen.netlify.app/',
     githubUrl: '#',
     description:
       'Plateforme SaaS pour la gestion de rendez-vous administratifs : portail citoyen, espace agent et dashboard admin.',
