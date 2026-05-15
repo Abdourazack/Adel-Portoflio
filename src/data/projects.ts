@@ -33,7 +33,7 @@ export const projects: ProjectItem[] = [
     subtitle: 'Inspiré du module Datafactory',
     type: 'Démo portfolio',
     image: '/images/projects/product-dashboard-demo.png',
-    demoUrl: '#',
+    demoUrl: 'https://product-dashboard-demo1.netlify.app/',
     githubUrl: '#',
     description:
       'Interface de recherche produit par EAN/ISBN avec affichage de données détaillées, tableaux dynamiques et résumé produit.',
