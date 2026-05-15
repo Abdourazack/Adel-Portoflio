@@ -32,7 +32,7 @@ export const projects: ProjectItem[] = [
     title: 'Product Dashboard Demo',
     subtitle: 'Inspiré du module Datafactory',
     type: 'Démo portfolio',
-    image: '/images/projects/product-dashboard-demo.png',
+    image: '/images/projects/dashboard.png',
     demoUrl: 'https://product-dashboard-demo1.netlify.app/',
     githubUrl: '#',
     description:
