@@ -21,7 +21,7 @@
           LinkedIn
         </a>
 
-        <a class="btn btn-secondary" href="#" target="_blank">
+        <a class="btn btn-secondary" href="https://github.com/Abdourazack" target="_blank">
           GitHub
         </a>
       </div>
