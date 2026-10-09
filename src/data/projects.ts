@@ -25,7 +25,7 @@ export const projects: ProjectItem[] = [
 
     type: 'Projet portfolio',
 
-    image: '/images/projects/dashboard.png',
+    image: '/images/projects/business-dashboard.png',
 
     demoUrl:
       'https://business-dashboardd.netlify.app/',
@@ -115,7 +115,7 @@ export const projects: ProjectItem[] = [
     type: 'Projet portfolio',
 
     image:
-      '/images/projects/gestionnaire-candidature.png',
+      '/images/projects/gestionnaire-candidatures.png',
 
     demoUrl:
       'https://gestionnaire-des-candidatures.netlify.app/',
