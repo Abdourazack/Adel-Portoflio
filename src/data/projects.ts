@@ -25,7 +25,8 @@ export const projects: ProjectItem[] = [
 
     type: 'Projet portfolio',
 
-    image: '/images/projects/business-dashboard.png',
+    image:
+      '/images/projects/business-dashboard.png',
 
     demoUrl:
       'https://business-dashboardd.netlify.app/',
@@ -72,7 +73,8 @@ export const projects: ProjectItem[] = [
 
     type: 'Projet personnel',
 
-    image: '/images/projects/djcitoyen.png',
+    image:
+      '/images/projects/djcitoyen.png',
 
     demoUrl:
       'https://djicitoyen.netlify.app/',
@@ -172,36 +174,103 @@ export const projects: ProjectItem[] = [
     title: 'TravelExplore — Travel Planner',
 
     subtitle:
-      'Exploration et planification de voyages avec React',
+      'Application React de découverte touristique et de planification de voyages',
 
-    type: 'Projet à venir',
+    type: 'Projet portfolio',
 
     image:
       '/images/projects/travel-explore.png',
 
-    demoUrl: '#',
+    demoUrl:
+      'https://travelexplore-react.netlify.app/',
 
-    githubUrl: '#',
+    githubUrl:
+      'https://github.com/Abdourazack/travelexplore',
 
     description:
-      'Future application interactive permettant de rechercher des destinations, de découvrir des lieux touristiques et de construire des itinéraires personnalisés. Le projet mettra en pratique React, TypeScript et les API de données touristiques.',
+      'Application web interactive de découverte touristique et de planification de voyages, développée avec React, TypeScript et Vite. TravelExplore permet de rechercher une ville, de découvrir les monuments, musées et lieux remarquables à proximité, puis de sélectionner ses destinations favorites et de créer un itinéraire personnalisé. Les informations touristiques proviennent de l’API MediaWiki de Wikipédia, tandis que les photographies d’inspiration sont fournies par Unsplash. Deux fonctions serverless Netlify assurent la communication avec ces services externes. L’application intègre les crédits et licences des photographies Wikimedia, la sauvegarde locale des favoris et itinéraires, ainsi que l’export des voyages au format TXT. Le projet est organisé en composants React, services API, hooks personnalisés et types TypeScript, avec une interface responsive et un déploiement continu via GitHub et Netlify.',
 
     stack: [
       'React',
       'TypeScript',
       'Vite',
       'React Router',
-      'Tailwind CSS',
+      'HTML5',
+      'CSS3',
       'REST API',
+      'MediaWiki API',
+      'Wikimedia Commons',
+      'Unsplash API',
+      'Netlify Functions',
+      'Serverless',
+      'React Hooks',
+      'useSyncExternalStore',
+      'localStorage',
+      'Git',
+      'GitHub',
+      'Netlify',
     ],
 
     features: [
-      'Recherche de destinations — prévue',
-      'Découverte des lieux touristiques — prévue',
-      'Filtres par pays et catégorie — prévus',
-      'Création d’itinéraires personnalisés — prévue',
-      'Gestion des favoris — prévue',
-      'Interface responsive et interactive — prévue',
+      'Recherche interactive de destinations par nom de ville',
+
+      'Géolocalisation des lieux touristiques à partir des coordonnées Wikipédia',
+
+      'Découverte de monuments historiques, musées, églises et sites culturels',
+
+      'Recherche géographique des attractions dans un rayon autour de la ville sélectionnée',
+
+      'Récupération des descriptions touristiques en français avec l’API MediaWiki',
+
+      'Filtrage des résultats pour privilégier les lieux présentant un intérêt touristique',
+
+      'Affichage de photographies Wikimedia associées aux articles Wikipédia',
+
+      'Récupération et affichage des auteurs, sources et licences des photographies Wikimedia',
+
+      'Photographies d’inspiration fournies par l’API Unsplash',
+
+      'Affichage des crédits photographiques et des liens vers Unsplash',
+
+      'Ajout et suppression de lieux touristiques dans les favoris',
+
+      'Gestion des favoris à l’aide d’un hook React personnalisé',
+
+      'Synchronisation des favoris entre les composants avec useSyncExternalStore',
+
+      'Sauvegarde persistante des favoris dans localStorage',
+
+      'Création d’itinéraires personnalisés à partir des lieux favoris',
+
+      'Personnalisation du voyage avec un titre, une date et des notes',
+
+      'Ajout et suppression d’étapes dans le planificateur',
+
+      'Réorganisation des étapes avec des commandes de déplacement',
+
+      'Sauvegarde automatique des itinéraires dans le navigateur',
+
+      'Export des itinéraires au format TXT',
+
+      'Gestion des états de chargement, des erreurs API et des résultats vides',
+
+      'Communication avec des API externes via des fonctions serverless Netlify',
+
+      'Protection de la clé Unsplash grâce aux variables d’environnement côté serveur',
+
+      'Navigation entre les pages avec React Router',
+
+      'Interface responsive avec une identité visuelle bleu nuit et vert émeraude',
+
+      'Favicon personnalisé pour l’identité visuelle de TravelExplore',
+
+      'Architecture frontend structurée en pages, services, hooks et types TypeScript',
+
+      'Version de production compilée avec Vite et TypeScript',
+
+      'Code source versionné et publié sur GitHub',
+
+      'Déploiement public de l’application sur Netlify',
     ],
   },
 
