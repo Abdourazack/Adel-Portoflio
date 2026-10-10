@@ -179,7 +179,7 @@ export const projects: ProjectItem[] = [
     type: 'Projet portfolio',
 
     image:
-      '/images/projects/travel-explore.png',
+      '/images/projects/travelexplore.png',
 
     demoUrl:
       'https://travelexplore-react.netlify.app/',
