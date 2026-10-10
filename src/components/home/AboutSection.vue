@@ -3,26 +3,32 @@
 import SectionTitle from '../layout/SectionTitle.vue'
 
 // ==========================================
-// COMPÉTENCES FRONTEND
+// TECHNOLOGIES FRONTEND PRINCIPALES
 // ==========================================
 
 const frameworksFrontend = [
   {
     nom: 'Vue.js 3',
+    type: 'Framework frontend',
     description: 'Business Dashboard et DjiCitoyen',
+    details: 'Composition API, Pinia, Vue Router et TypeScript',
   },
   {
     nom: 'Angular',
+    type: 'Framework frontend',
     description: 'Gestionnaire de candidatures',
+    details: 'Signals, RxJS, formulaires réactifs et TypeScript',
   },
   {
     nom: 'React',
+    type: 'Bibliothèque frontend',
     description: 'TravelExplore',
+    details: 'React Hooks, React Router, Vite et TypeScript',
   },
 ]
 
 // ==========================================
-// TECHNOLOGIES PRATIQUÉES
+// COMPÉTENCES TECHNIQUES
 // ==========================================
 
 const technologies = [
@@ -36,10 +42,10 @@ const technologies = [
   'Vite',
   'Pinia',
   'Vue Router',
-  'React Router',
   'Angular Signals',
   'RxJS',
   'React Hooks',
+  'React Router',
   'Node.js',
   'Express.js',
   'API REST',
@@ -53,14 +59,13 @@ const technologies = [
 // ==========================================
 
 const outils = [
-  'Visual Studio Code',
+  'VS Code',
   'Postman',
   'DBeaver',
   'Git Bash',
+  'npm',
   'Netlify',
   'Render',
-  'Vite',
-  'npm',
 ]
 
 // ==========================================
@@ -70,39 +75,31 @@ const outils = [
 const projets = [
   {
     nom: 'Business Dashboard',
-    technologie:
-      'Vue.js 3 · TypeScript · Node.js · Express',
+    technologie: 'Vue.js 3 · TypeScript · Node.js · Express',
     description:
-      'Application métier fullstack permettant la recherche de produits par EAN/ISBN et la supervision de serveurs fictifs. Architecture frontend/backend avec API REST.',
-    lien:
-      'https://business-dashboardd.netlify.app/',
+      'Application métier fullstack permettant la recherche de produits par EAN/ISBN et la supervision de serveurs fictifs. Communication avec une API REST.',
+    lien: 'https://business-dashboardd.netlify.app/',
   },
   {
     nom: 'DjiCitoyen',
-    technologie:
-      'Vue.js 3 · TypeScript · Express · MySQL',
+    technologie: 'Vue.js 3 · TypeScript · Express · MySQL',
     description:
-      'Plateforme de démarches administratives avec portail citoyen, prise de rendez-vous, suivi des demandes, authentification et gestion des rôles agent et administrateur.',
-    lien:
-      'https://djicitoyen.netlify.app/',
+      'Plateforme de démarches administratives avec portail citoyen, gestion des rendez-vous, suivi des demandes et espaces agent et administrateur.',
+    lien: 'https://djicitoyen.netlify.app/',
   },
   {
     nom: 'Gestionnaire de candidatures',
-    technologie:
-      'Angular · TypeScript · Signals · RxJS',
+    technologie: 'Angular · TypeScript · Signals · RxJS',
     description:
-      'Application de suivi des candidatures avec formulaires réactifs, statistiques, graphiques, recherche, filtres, gestion des statuts, export CSV et sauvegarde locale.',
-    lien:
-      'https://gestionnaire-des-candidatures.netlify.app/',
+      'Application de suivi des candidatures avec gestion des statuts, statistiques, graphiques, filtres, formulaires réactifs et export CSV.',
+    lien: 'https://gestionnaire-des-candidatures.netlify.app/',
   },
   {
     nom: 'TravelExplore',
-    technologie:
-      'React · TypeScript · Vite · Netlify Functions',
+    technologie: 'React · TypeScript · Vite · Netlify Functions',
     description:
-      'Application touristique exploitant Wikipédia, Wikimedia et Unsplash. Recherche de destinations, gestion des favoris, création d’itinéraires, sauvegarde locale et export TXT.',
-    lien:
-      'https://travelexplore-react.netlify.app/',
+      'Application de découverte touristique utilisant Wikipédia, Wikimedia et Unsplash. Recherche de destinations, favoris, création d’itinéraires, sauvegarde locale et export TXT.',
+    lien: 'https://travelexplore-react.netlify.app/',
   },
 ]
 </script>
@@ -113,13 +110,13 @@ const projets = [
     class="section about-section"
   >
     <!-- =====================================
-         EN-TÊTE
+         TITRE DE SECTION
     ====================================== -->
 
     <SectionTitle
       eyebrow="À propos de moi"
       title="Développeur Web Fullstack Junior"
-      description="Je développe des applications web modernes avec Vue.js, Angular, React, TypeScript, Node.js et Express. Mes réalisations couvrent le frontend, les API REST, la gestion des données et le déploiement."
+      description="Je développe des applications web modernes avec Vue.js 3, Angular, React, TypeScript, Node.js et Express.js. Mes réalisations couvrent le frontend, les API REST, les bases de données et le déploiement."
     />
 
     <!-- =====================================
@@ -140,17 +137,18 @@ const projets = [
         <p>
           Formé en
           <strong>informatique de gestion</strong>,
-          je développe mes compétences en
-          conception d'applications web
-          frontend et backend.
+          je développe mes compétences
+          dans la conception d'applications
+          web frontend et backend.
         </p>
 
         <p>
           Je m'intéresse particulièrement
-          aux applications métier, aux
-          tableaux de bord, aux plateformes
-          administratives et aux services
-          numériques utiles aux utilisateurs.
+          aux applications métier,
+          aux tableaux de bord,
+          aux plateformes administratives
+          et aux services numériques
+          utiles aux utilisateurs.
         </p>
 
         <p>
@@ -167,12 +165,11 @@ const projets = [
           J'ai développé des applications
           avec trois technologies frontend :
           <strong>
-            Vue.js 3, Angular et React
-          </strong>.
+            Vue.js 3, Angular et React.
+          </strong>
           J'utilise principalement
           <strong>TypeScript</strong>
-          pour structurer et fiabiliser
-          mes applications.
+          pour structurer mes applications.
         </p>
       </div>
 
@@ -183,7 +180,6 @@ const projets = [
           <span class="highlight-number">
             300 h
           </span>
-
           <span class="highlight-label">
             Stage professionnel
           </span>
@@ -191,9 +187,8 @@ const projets = [
 
         <div class="highlight-item">
           <span class="highlight-number">
-            4
+            {{ projets.length }}
           </span>
-
           <span class="highlight-label">
             Projets web présentés
           </span>
@@ -201,18 +196,17 @@ const projets = [
 
         <div class="highlight-item">
           <span class="highlight-number">
-            3
+            {{ frameworksFrontend.length }}
           </span>
-
           <span class="highlight-label">
-            Technologies frontend majeures
+            Technologies frontend principales
           </span>
         </div>
       </div>
     </div>
 
     <!-- =====================================
-         FRAMEWORKS FRONTEND
+         VUE.JS / ANGULAR / REACT
     ====================================== -->
 
     <div class="frontend-section">
@@ -227,11 +221,11 @@ const projets = [
         </h3>
 
         <p>
-          J'ai mis en pratique Vue.js,
-          Angular et React au travers
-          d'applications distinctes,
-          avec des architectures et
-          des fonctionnalités différentes.
+          Mes projets m'ont permis de mettre
+          en pratique Vue.js, Angular et React,
+          avec des architectures,
+          des bibliothèques et des méthodes
+          de gestion d'état différentes.
         </p>
       </div>
 
@@ -241,16 +235,24 @@ const projets = [
           :key="framework.nom"
           class="framework-card"
         >
-          <span class="framework-number">
-            {{ String(index + 1).padStart(2, '0') }}
-          </span>
+          <div class="framework-top">
+            <span class="framework-number">
+              {{ String(index + 1).padStart(2, '0') }}
+            </span>
 
-          <h4>
-            {{ framework.nom }}
-          </h4>
+            <span class="framework-type">
+              {{ framework.type }}
+            </span>
+          </div>
 
-          <p>
+          <h4>{{ framework.nom }}</h4>
+
+          <p class="framework-project">
             {{ framework.description }}
+          </p>
+
+          <p class="framework-details">
+            {{ framework.details }}
           </p>
         </article>
       </div>
@@ -266,65 +268,50 @@ const projets = [
 
       <article class="about-card card">
         <div class="card-top">
-          <span class="card-number">
-            01
-          </span>
-
+          <span class="card-number">01</span>
           <span class="card-category">
             Développement
           </span>
         </div>
 
-        <h3>
-          Mon profil technique
-        </h3>
+        <h3>Mon profil technique</h3>
 
         <p>
           Je conçois des interfaces web
-          interactives et responsives
-          avec
+          modernes et responsives avec
           <strong>
-            Vue.js 3, Angular,
-            React et TypeScript
-          </strong>.
+            Vue.js 3, Angular, React
+            et TypeScript.
+          </strong>
         </p>
 
         <p>
-          Mes projets utilisent des
-          composants réutilisables,
-          des systèmes de navigation,
+          Mes projets utilisent des composants
+          réutilisables, des systèmes de navigation,
           des formulaires, des services API
-          et différentes méthodes
-          de gestion d'état.
+          et différentes méthodes de gestion d'état.
         </p>
 
         <p>
           J'ai notamment pratiqué
           <strong>
             Pinia, Angular Signals,
-            RxJS et les React Hooks
-          </strong>.
+            RxJS et React Hooks.
+          </strong>
         </p>
 
         <p>
-          Pour le backend,
-          je travaille avec
-          <strong>
-            Node.js et Express.js
-          </strong>
-          afin de créer et utiliser
-          des API REST et communiquer
-          avec les bases de données.
+          Pour le backend, je travaille avec
+          <strong>Node.js et Express.js</strong>,
+          notamment pour concevoir des API REST
+          et communiquer avec des bases de données.
         </p>
 
         <p>
           J'ai également utilisé
-          les
-          <strong>
-            fonctions serverless Netlify
-          </strong>
-          pour intégrer les API Wikipédia,
-          Wikimedia et Unsplash
+          les fonctions serverless Netlify
+          pour intégrer les API
+          MediaWiki et Unsplash
           dans TravelExplore.
         </p>
 
@@ -347,10 +334,7 @@ const projets = [
 
       <article class="about-card card">
         <div class="card-top">
-          <span class="card-number">
-            02
-          </span>
-
+          <span class="card-number">02</span>
           <span class="card-category">
             Expérience
           </span>
@@ -361,22 +345,16 @@ const projets = [
         </h3>
 
         <div class="experience-heading">
-          <strong>
-            Tite Live SA
-          </strong>
-
+          <strong>Tite Live SA</strong>
           <span>
             Stage professionnel · 300 heures
           </span>
         </div>
 
         <p>
-          J'ai effectué un stage
-          en développement d'applications
-          métier chez
-          <strong>
-            Tite Live SA à Mouscron
-          </strong>.
+          J'ai effectué un stage en développement
+          d'applications métier chez
+          <strong>Tite Live SA à Mouscron</strong>.
         </p>
 
         <p>
@@ -387,18 +365,16 @@ const projets = [
             Node.js et Express.js
           </strong>,
           ainsi qu'avec des API REST
-          et des bases de données
-          <strong>
-            MySQL et Firebird
-          </strong>.
+          et les bases de données
+          <strong>MySQL et Firebird</strong>.
         </p>
 
         <p>
-          J'ai travaillé sur la compréhension
-          du code existant, la recherche
-          d'erreurs, les tests,
-          l'organisation des fonctionnalités
-          et la résolution de problèmes.
+          J'ai renforcé mes méthodes de travail :
+          lecture et compréhension du code existant,
+          recherche d'erreurs, tests,
+          organisation des fonctionnalités
+          et résolution de problèmes techniques.
         </p>
 
         <p>
@@ -423,30 +399,23 @@ const projets = [
         </div>
       </article>
 
-      <!-- CARTE 3 : RÉALISATIONS -->
+      <!-- CARTE 3 : PROJETS -->
 
       <article class="about-card card">
         <div class="card-top">
-          <span class="card-number">
-            03
-          </span>
-
+          <span class="card-number">03</span>
           <span class="card-category">
             Réalisations
           </span>
         </div>
 
-        <h3>
-          Mes projets personnels
-        </h3>
+        <h3>Mes projets personnels</h3>
 
         <p>
-          Je réalise des applications
-          complètes pour pratiquer
-          différentes technologies,
-          découvrir de nouvelles
-          architectures et enrichir
-          mon portfolio professionnel.
+          Je réalise des applications concrètes
+          pour approfondir mes compétences,
+          découvrir différentes architectures
+          et enrichir mon portfolio.
         </p>
 
         <div class="projects-mini-list">
@@ -460,10 +429,7 @@ const projets = [
             :aria-label="`Découvrir le projet ${projet.nom}`"
           >
             <div class="mini-project-heading">
-              <strong>
-                {{ projet.nom }}
-              </strong>
-
+              <strong>{{ projet.nom }}</strong>
               <span
                 class="project-arrow"
                 aria-hidden="true"
@@ -476,18 +442,15 @@ const projets = [
               {{ projet.technologie }}
             </span>
 
-            <p>
-              {{ projet.description }}
-            </p>
+            <p>{{ projet.description }}</p>
           </a>
         </div>
 
         <p class="privacy-note">
-          Les démonstrations sont
-          des projets personnels
-          ou de présentation.
-          Elles ne donnent pas accès
-          aux données confidentielles
+          Les démonstrations présentées
+          sont des projets personnels
+          ou de présentation. Elles ne donnent
+          pas accès aux données confidentielles
           des environnements professionnels.
         </p>
       </article>
@@ -509,15 +472,13 @@ const projets = [
         </h3>
 
         <p>
-          Je recherche une opportunité
-          en tant que
+          Je recherche une opportunité en tant que
           <strong>
             développeur web junior,
             frontend ou fullstack
           </strong>,
-          pour mettre mes compétences
-          en pratique et contribuer
-          à des projets concrets.
+          afin de contribuer à des projets concrets
+          et d'évoluer au sein d'une équipe.
         </p>
 
         <p>
@@ -525,12 +486,10 @@ const projets = [
           <strong>
             Vue.js, Angular et React
           </strong>
-          montrent ma capacité à
-          m'adapter à différents
-          environnements techniques,
-          intégrer des API et mener
-          des applications jusqu'à
-          leur déploiement.
+          illustrent ma capacité à utiliser
+          différents environnements frontend,
+          intégrer des services externes
+          et déployer des applications web.
         </p>
       </div>
 
@@ -540,10 +499,7 @@ const projets = [
         aria-label="Accéder à la section contact"
       >
         Me contacter
-
-        <span aria-hidden="true">
-          ↗
-        </span>
+        <span aria-hidden="true">↗</span>
       </a>
     </div>
   </section>
@@ -551,11 +507,12 @@ const projets = [
 
 <style scoped>
 /* ==========================================
-   SECTION ABOUT
+   SECTION
 ========================================== */
 
 .about-section {
   position: relative;
+  scroll-margin-top: 110px;
 }
 
 /* ==========================================
@@ -564,19 +521,13 @@ const projets = [
 
 .about-intro {
   display: grid;
-  grid-template-columns:
-    minmax(0, 1.5fr)
-    minmax(260px, 1fr);
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 1fr);
   align-items: center;
   gap: 36px;
-
   margin-bottom: 28px;
   padding: 32px;
-
-  border: 1px solid
-    var(--border-color, #334155);
+  border: 1px solid var(--border-color, #334155);
   border-radius: 20px;
-
   background: linear-gradient(
     135deg,
     rgba(139, 92, 246, 0.09),
@@ -592,7 +543,6 @@ const projets = [
 .objective-label {
   display: inline-block;
   margin-bottom: 12px;
-
   color: #a78bfa;
   font-size: 0.78rem;
   font-weight: 700;
@@ -602,10 +552,8 @@ const projets = [
 
 .intro-content h3 {
   margin: 0 0 20px;
-  color:
-    var(--text-primary, #f8fafc);
-  font-size:
-    clamp(1.4rem, 2.5vw, 2rem);
+  color: var(--text-primary, #f8fafc);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
   line-height: 1.35;
 }
 
@@ -615,8 +563,7 @@ const projets = [
 
 .intro-content p {
   margin: 0 0 14px;
-  color:
-    var(--text-muted, #94a3b8);
+  color: var(--text-muted, #94a3b8);
   font-size: 0.95rem;
   line-height: 1.85;
 }
@@ -626,8 +573,7 @@ const projets = [
 }
 
 .intro-content strong {
-  color:
-    var(--text-primary, #f8fafc);
+  color: var(--text-primary, #f8fafc);
   font-weight: 600;
 }
 
@@ -637,8 +583,7 @@ const projets = [
 
 .intro-highlights {
   display: grid;
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -647,14 +592,10 @@ const projets = [
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-
   min-height: 120px;
   padding: 18px;
-
-  background:
-    rgba(15, 23, 42, 0.55);
-  border: 1px solid
-    rgba(139, 92, 246, 0.18);
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(139, 92, 246, 0.18);
   border-radius: 14px;
 }
 
@@ -670,38 +611,31 @@ const projets = [
 }
 
 .highlight-label {
-  color:
-    var(--text-muted, #94a3b8);
+  color: var(--text-muted, #94a3b8);
   font-size: 0.82rem;
   line-height: 1.5;
 }
 
 /* ==========================================
-   SECTION FRAMEWORKS FRONTEND
+   FRONTEND : VUE / ANGULAR / REACT
 ========================================== */
 
 .frontend-section {
   margin-bottom: 28px;
   padding: 30px 32px;
-
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: 20px;
   background: linear-gradient(
     135deg,
     rgba(139, 92, 246, 0.13),
     rgba(15, 23, 42, 0.3)
   );
-
-  border: 1px solid
-    rgba(139, 92, 246, 0.25);
-  border-radius: 20px;
 }
 
 .frontend-heading h3 {
   margin: 0 0 12px;
-
-  color:
-    var(--text-primary, #f8fafc);
-  font-size:
-    clamp(1.35rem, 2.5vw, 1.9rem);
+  color: var(--text-primary, #f8fafc);
+  font-size: clamp(1.35rem, 2.5vw, 1.9rem);
   line-height: 1.35;
 }
 
@@ -712,33 +646,24 @@ const projets = [
 .frontend-heading > p {
   max-width: 750px;
   margin: 0;
-
-  color:
-    var(--text-muted, #94a3b8);
+  color: var(--text-muted, #94a3b8);
   font-size: 0.94rem;
   line-height: 1.8;
 }
 
 .frontend-frameworks {
   display: grid;
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
-
   margin-top: 26px;
 }
 
 .framework-card {
   min-width: 0;
   padding: 22px;
-
-  border: 1px solid
-    rgba(139, 92, 246, 0.24);
+  border: 1px solid rgba(139, 92, 246, 0.24);
   border-radius: 14px;
-
-  background:
-    rgba(15, 23, 42, 0.45);
-
+  background: rgba(15, 23, 42, 0.45);
   transition:
     transform 0.25s ease,
     border-color 0.25s ease;
@@ -746,43 +671,55 @@ const projets = [
 
 .framework-card:hover {
   transform: translateY(-4px);
-  border-color:
-    rgba(167, 139, 250, 0.55);
+  border-color: rgba(167, 139, 250, 0.55);
+}
+
+.framework-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
 }
 
 .framework-number {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   width: 39px;
   height: 39px;
-
-  margin-bottom: 19px;
-
   border-radius: 10px;
-  background:
-    rgba(139, 92, 246, 0.14);
-
+  background: rgba(139, 92, 246, 0.14);
   color: #c4b5fd;
   font-size: 0.85rem;
   font-weight: 800;
 }
 
-.framework-card h4 {
-  margin: 0 0 9px;
-
-  color:
-    var(--text-primary, #f8fafc);
-  font-size: 1.18rem;
+.framework-type {
+  color: #a78bfa;
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 
-.framework-card p {
-  margin: 0;
+.framework-card h4 {
+  margin: 0 0 10px;
+  color: var(--text-primary, #f8fafc);
+  font-size: 1.2rem;
+}
 
-  color:
-    var(--text-muted, #94a3b8);
-  font-size: 0.85rem;
+.framework-project {
+  margin: 0 0 10px;
+  color: #c4b5fd;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.framework-details {
+  margin: 0;
+  color: var(--text-muted, #94a3b8);
+  font-size: 0.83rem;
   line-height: 1.7;
 }
 
@@ -792,8 +729,7 @@ const projets = [
 
 .about-grid {
   display: grid;
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
   gap: 22px;
 }
@@ -806,11 +742,9 @@ const projets = [
   display: flex;
   flex-direction: column;
   gap: 16px;
-
   min-width: 0;
   height: 100%;
   padding: 28px;
-
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
@@ -819,10 +753,8 @@ const projets = [
 
 .about-card:hover {
   transform: translateY(-5px);
-  border-color:
-    rgba(139, 92, 246, 0.4);
-  box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.12);
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* ==========================================
@@ -842,16 +774,11 @@ const projets = [
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 46px;
   height: 46px;
-
   border-radius: 12px;
-  background:
-    rgba(139, 92, 246, 0.12);
-  border: 1px solid
-    rgba(139, 92, 246, 0.2);
-
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.2);
   color: #a78bfa;
   font-size: 0.95rem;
   font-weight: 700;
@@ -859,13 +786,9 @@ const projets = [
 
 .card-category {
   padding: 7px 12px;
-
   border-radius: 999px;
-  background:
-    rgba(139, 92, 246, 0.08);
-  border: 1px solid
-    rgba(139, 92, 246, 0.17);
-
+  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.17);
   color: #c4b5fd;
   font-size: 0.72rem;
   font-weight: 600;
@@ -877,9 +800,7 @@ const projets = [
 
 .about-card h3 {
   margin: 0;
-
-  color:
-    var(--text-primary, #f8fafc);
+  color: var(--text-primary, #f8fafc);
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 1.4;
@@ -890,29 +811,25 @@ const projets = [
 }
 
 .card-subtitle {
-  color:
-    var(--text-primary, #f8fafc);
+  color: var(--text-primary, #f8fafc);
   font-size: 0.86rem;
   font-weight: 700;
 }
 
 .about-card p {
   margin: 0;
-
-  color:
-    var(--text-muted, #94a3b8);
+  color: var(--text-muted, #94a3b8);
   font-size: 0.93rem;
   line-height: 1.8;
 }
 
 .about-card strong {
-  color:
-    var(--text-primary, #f8fafc);
+  color: var(--text-primary, #f8fafc);
   font-weight: 600;
 }
 
 /* ==========================================
-   TECHNOLOGIES
+   BADGES TECHNOLOGIES
 ========================================== */
 
 .technology-list {
@@ -926,13 +843,9 @@ const projets = [
   display: inline-flex;
   align-items: center;
   padding: 7px 11px;
-
-  background:
-    rgba(139, 92, 246, 0.1);
-  border: 1px solid
-    rgba(139, 92, 246, 0.22);
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.22);
   border-radius: 8px;
-
   color: #c4b5fd;
   font-size: 0.75rem;
   font-weight: 600;
@@ -940,10 +853,8 @@ const projets = [
 }
 
 .technology-badge.secondary {
-  background:
-    rgba(56, 189, 248, 0.07);
-  border-color:
-    rgba(56, 189, 248, 0.18);
+  background: rgba(56, 189, 248, 0.07);
+  border-color: rgba(56, 189, 248, 0.18);
   color: #7dd3fc;
 }
 
@@ -956,24 +867,18 @@ const projets = [
   flex-direction: column;
   gap: 6px;
   padding: 14px 16px;
-
-  background:
-    rgba(139, 92, 246, 0.07);
-  border-left:
-    3px solid #8b5cf6;
-  border-radius:
-    0 10px 10px 0;
+  background: rgba(139, 92, 246, 0.07);
+  border-left: 3px solid #8b5cf6;
+  border-radius: 0 10px 10px 0;
 }
 
 .experience-heading strong {
-  color:
-    var(--text-primary, #f8fafc);
+  color: var(--text-primary, #f8fafc);
   font-size: 0.94rem;
 }
 
 .experience-heading span {
-  color:
-    var(--text-muted, #94a3b8);
+  color: var(--text-muted, #94a3b8);
   font-size: 0.8rem;
 }
 
@@ -991,17 +896,11 @@ const projets = [
   display: flex;
   flex-direction: column;
   gap: 7px;
-
   padding: 15px;
-
-  border: 1px solid
-    rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.2);
   border-radius: 12px;
-
-  background:
-    rgba(139, 92, 246, 0.055);
+  background: rgba(139, 92, 246, 0.055);
   text-decoration: none;
-
   transition:
     background 0.2s ease,
     border-color 0.2s ease,
@@ -1009,10 +908,8 @@ const projets = [
 }
 
 .mini-project:hover {
-  background:
-    rgba(139, 92, 246, 0.12);
-  border-color:
-    rgba(139, 92, 246, 0.45);
+  background: rgba(139, 92, 246, 0.12);
+  border-color: rgba(139, 92, 246, 0.45);
   transform: translateY(-2px);
 }
 
@@ -1047,9 +944,7 @@ const projets = [
 
 .mini-project p {
   margin: 0;
-
-  color:
-    var(--text-muted, #94a3b8);
+  color: var(--text-muted, #94a3b8);
   font-size: 0.82rem;
   line-height: 1.65;
 }
@@ -1057,10 +952,7 @@ const projets = [
 .privacy-note {
   margin-top: auto !important;
   padding-top: 14px;
-
-  border-top: 1px solid
-    rgba(148, 163, 184, 0.15);
-
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
   font-size: 0.8rem !important;
   font-style: italic;
 }
@@ -1074,18 +966,14 @@ const projets = [
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-
   margin-top: 28px;
   padding: 30px 32px;
-
   background: linear-gradient(
     135deg,
     rgba(139, 92, 246, 0.13),
     rgba(15, 23, 42, 0.25)
   );
-
-  border: 1px solid
-    rgba(139, 92, 246, 0.25);
+  border: 1px solid rgba(139, 92, 246, 0.25);
   border-radius: 18px;
 }
 
@@ -1095,19 +983,14 @@ const projets = [
 
 .objective-content h3 {
   margin: 0 0 14px;
-
-  color:
-    var(--text-primary, #f8fafc);
-  font-size:
-    clamp(1.25rem, 2.5vw, 1.65rem);
+  color: var(--text-primary, #f8fafc);
+  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
   line-height: 1.4;
 }
 
 .objective-content p {
   margin: 0 0 12px;
-
-  color:
-    var(--text-muted, #94a3b8);
+  color: var(--text-muted, #94a3b8);
   font-size: 0.92rem;
   line-height: 1.8;
 }
@@ -1117,8 +1000,7 @@ const projets = [
 }
 
 .objective-content strong {
-  color:
-    var(--text-primary, #f8fafc);
+  color: var(--text-primary, #f8fafc);
   font-weight: 600;
 }
 
@@ -1132,20 +1014,15 @@ const projets = [
   justify-content: center;
   gap: 12px;
   flex-shrink: 0;
-
   padding: 13px 20px;
-
   color: #ffffff;
   background: #7c3aed;
-
   border: 1px solid #8b5cf6;
   border-radius: 10px;
-
   font-size: 0.88rem;
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
-
   transition:
     background 0.2s ease,
     transform 0.2s ease,
@@ -1155,9 +1032,7 @@ const projets = [
 .objective-button:hover {
   background: #8b5cf6;
   transform: translateY(-2px);
-
-  box-shadow:
-    0 6px 20px rgba(124, 58, 237, 0.22);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.22);
 }
 
 .objective-button:focus-visible {
@@ -1175,22 +1050,15 @@ const projets = [
   }
 
   .intro-highlights {
-    grid-template-columns:
-      repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .highlight-item:first-child {
     grid-column: auto;
   }
 
-  .frontend-frameworks {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-  }
-
   .about-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .about-card:last-child {
@@ -1212,12 +1080,8 @@ const projets = [
     grid-template-columns: 1fr;
   }
 
-  .highlight-item {
-    min-height: 90px;
-  }
-
   .frontend-section {
-    padding: 23px;
+    padding: 22px;
   }
 
   .frontend-frameworks {
@@ -1225,7 +1089,7 @@ const projets = [
   }
 
   .framework-card {
-    padding: 19px;
+    padding: 20px;
   }
 
   .about-grid {
@@ -1241,14 +1105,6 @@ const projets = [
     grid-column: auto;
   }
 
-  .about-card h3 {
-    font-size: 1.1rem;
-  }
-
-  .about-card p {
-    font-size: 0.92rem;
-  }
-
   .about-objective {
     flex-direction: column;
     align-items: flex-start;
@@ -1258,6 +1114,16 @@ const projets = [
 
   .objective-button {
     width: 100%;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE INTERMÉDIAIRE
+========================================== */
+
+@media (min-width: 681px) and (max-width: 1050px) {
+  .frontend-frameworks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
