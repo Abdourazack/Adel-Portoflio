@@ -1,80 +1,157 @@
-<template>
-  <section id="skills" class="section skills-section">
-    <SectionTitle
-      eyebrow="Compétences"
-      title="Une stack claire, moderne et cohérente"
-      description="Mon profil est principalement orienté Vue.js, TypeScript, Node.js et Express.js, avec des connaissances complémentaires utiles pour m’adapter."
-    />
 
-    <div class="skills-grid">
-      <article
-        v-for="category in skillCategories"
-        :key="category.title"
-        class="skill-card card"
-      >
-        <h3>{{ category.title }}</h3>
-
-        <p>{{ category.description }}</p>
-
-        <div class="skill-list">
-          <span
-            v-for="skill in category.skills"
-            :key="skill"
-            class="skill-badge"
-          >
-            {{ skill }}
-          </span>
-        </div>
-      </article>
-    </div>
-  </section>
-</template>
-
-<script setup lang="ts">
-import SectionTitle from '../layout/SectionTitle.vue'
-import { skillCategories } from '../../data/skills'
-</script>
-
-<style scoped>
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+export type SkillCategory = {
+  title: string
+  description: string
+  skills: string[]
 }
 
-.skill-card {
-  padding: 28px;
-}
+export const skillCategories: SkillCategory[] = [
 
-.skill-card h3 {
-  margin-bottom: 12px;
-  font-size: 1.25rem;
-}
+  // ==========================================
+  // FRONTEND
+  // ==========================================
 
-.skill-card p {
-  color: var(--text-muted);
-  line-height: 1.7;
-}
+  {
+    title: 'Développement frontend',
 
-.skill-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 22px;
-}
+    description:
+      'Création d’interfaces web responsives et interactives avec plusieurs environnements JavaScript et TypeScript.',
 
-.skill-badge {
-  padding: 9px 13px;
-  border-radius: 999px;
-  border: 1px solid var(--border-color);
-  background: rgba(99, 102, 241, 0.09);
-  color: var(--text-soft);
-  font-size: 0.9rem;
-}
+    skills: [
+      'Vue.js 3',
+      'React',
+      'Angular',
+      'TypeScript',
+      'JavaScript',
+      'HTML5',
+      'CSS3',
+      'Vite',
+      'Vue Router',
+      'React Router',
+      'Angular Signals',
+      'RxJS',
+      'Reactive Forms',
+      'Pinia',
+      'Axios',
+    ],
+  },
 
-@media (max-width: 820px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
+  // ==========================================
+  // BACKEND ET API
+  // ==========================================
+
+  {
+    title: 'Backend et intégration API',
+
+    description:
+      'Développement d’API REST et communication entre interfaces frontend, services serveur et API externes.',
+
+    skills: [
+      'Node.js',
+      'Express.js',
+      'REST API',
+      'HTTP / HTTPS',
+      'JSON',
+      'Authentification JWT',
+      'Middleware',
+      'Netlify Functions',
+      'Serverless',
+      'MediaWiki API',
+      'Unsplash API',
+      'Postman',
+    ],
+  },
+
+  // ==========================================
+  // BASES DE DONNÉES
+  // ==========================================
+
+  {
+    title: 'Bases de données et stockage',
+
+    description:
+      'Manipulation de données relationnelles et sauvegarde locale des informations dans les applications web.',
+
+    skills: [
+      'MySQL',
+      'Firebird',
+      'SQL',
+      'localStorage',
+      'DBeaver',
+      'HeidiSQL',
+    ],
+  },
+
+  // ==========================================
+  // OUTILS ET DÉPLOIEMENT
+  // ==========================================
+
+  {
+    title: 'Outils, versionnement et déploiement',
+
+    description:
+      'Utilisation d’outils de développement, de gestion de code source et de plateformes de déploiement web.',
+
+    skills: [
+      'Git',
+      'GitHub',
+      'VS Code',
+      'npm',
+      'Vite Build',
+      'Netlify',
+      'Render',
+      'Variables d’environnement',
+      'Responsive Design',
+      'Débogage',
+    ],
+  },
+
+  // ==========================================
+  // GESTION D'ÉTAT ET INTERFACES
+  // ==========================================
+
+  {
+    title: 'Gestion d’état et expérience utilisateur',
+
+    description:
+      'Développement de fonctionnalités dynamiques, gestion des interactions et persistance des données côté navigateur.',
+
+    skills: [
+      'React Hooks',
+      'useState',
+      'useEffect',
+      'useSyncExternalStore',
+      'Angular Signals',
+      'Pinia',
+      'Formulaires réactifs',
+      'SweetAlert2',
+      'Recherche et filtres',
+      'Export CSV / TXT',
+    ],
+  },
+
+  // ==========================================
+  // MÉTHODES ET QUALITÉ
+  // ==========================================
+
+  {
+    title: 'Méthodes et bonnes pratiques',
+
+    description:
+      'Organisation du code, tests fonctionnels et attention portée à la qualité des applications et à leur publication.',
+
+    skills: [
+      'Architecture frontend / backend',
+      'Composants réutilisables',
+      'Services API',
+      'Typage TypeScript',
+      'Gestion des erreurs',
+      'Tests fonctionnels',
+      'Git Workflow',
+      'Protection des clés API',
+      'Accessibilité web',
+      'Crédits et licences des médias',
+    ],
+  },
+
+]

@@ -2,11 +2,18 @@
 <script setup lang="ts">
 import SectionTitle from '../layout/SectionTitle.vue'
 
+// ==========================================
+// COMPÉTENCES TECHNIQUES
+// ==========================================
+
 const technologies = [
   'Vue.js 3',
   'Angular',
+  'React',
   'TypeScript',
   'JavaScript',
+  'HTML5',
+  'CSS3',
   'Node.js',
   'Express.js',
   'API REST',
@@ -15,50 +22,100 @@ const technologies = [
   'GitHub',
 ]
 
+// ==========================================
+// OUTILS UTILISÉS
+// ==========================================
+
 const outils = [
+  'VS Code',
   'Postman',
   'DBeaver',
-  'VS Code',
+  'Vite',
   'Netlify',
   'Render',
+  'GitHub',
 ]
+
+// ==========================================
+// PROJETS RÉALISÉS
+// ==========================================
 
 const projets = [
   {
     nom: 'Business Dashboard',
-    technologie: 'Vue.js / Node.js',
+
+    technologie:
+      'Vue.js 3 / TypeScript / Node.js / Express',
+
     description:
-      'Recherche de produits par EAN/ISBN et supervision de serveurs fictifs.',
-    lien: 'https://business-dashboardd.netlify.app/',
+      'Application métier fullstack proposant une recherche de produits par EAN/ISBN et un tableau de bord de supervision de serveurs fictifs. Communication avec une API REST et déploiement du frontend et du backend.',
+
+    lien:
+      'https://business-dashboardd.netlify.app/',
   },
+
   {
     nom: 'DjiCitoyen',
-    technologie: 'Vue.js / Express / MySQL',
+
+    technologie:
+      'Vue.js 3 / TypeScript / Express / MySQL',
+
     description:
-      'Plateforme de démarches administratives avec gestion des rendez-vous, portail citoyen et espaces agent et administrateur.',
-    lien: 'https://djicitoyen.netlify.app/',
+      'Plateforme de démarches administratives avec portail citoyen, prise de rendez-vous, suivi des demandes et interfaces dédiées aux agents et administrateurs. Authentification et gestion des rôles.',
+
+    lien:
+      'https://djicitoyen.netlify.app/',
   },
+
   {
     nom: 'Gestionnaire de candidatures',
-    technologie: 'Angular / TypeScript',
+
+    technologie:
+      'Angular / TypeScript / Signals / RxJS',
+
     description:
-      'Application de suivi des candidatures avec statistiques, graphiques, filtres, tri, export CSV et sauvegarde locale.',
-    lien: 'https://gestionnaire-des-candidatures.netlify.app/',
+      'Application de suivi des candidatures avec gestion des statuts, statistiques interactives, graphiques, recherche, filtres, tri chronologique, export CSV et sauvegarde locale des données.',
+
+    lien:
+      'https://gestionnaire-des-candidatures.netlify.app/',
+  },
+
+  {
+    nom: 'TravelExplore — Travel Planner',
+
+    technologie:
+      'React / TypeScript / Vite / Netlify Functions',
+
+    description:
+      'Application de découverte touristique utilisant les API Wikipédia, Wikimedia et Unsplash. Recherche de lieux par ville, géolocalisation, gestion des favoris, planification d’itinéraires, sauvegarde locale et export TXT. Photographies accompagnées de leurs crédits et licences.',
+
+    lien:
+      'https://travelexplore-react.netlify.app/',
   },
 ]
 </script>
 
 <template>
   <section id="about" class="section about-section">
+
+    <!-- =====================================
+         TITRE DE SECTION
+    ====================================== -->
+
     <SectionTitle
       eyebrow="À propos de moi"
       title="Développeur Web Fullstack Junior"
-      description="Passionné par la création d'applications web utiles et modernes, je développe des interfaces interactives et des solutions métier avec Vue.js, Angular, TypeScript et Node.js."
+      description="Passionné par la création d'applications web utiles et modernes, je développe des interfaces interactives et des solutions métier avec Vue.js, Angular, React, TypeScript et Node.js."
     />
 
-    <!-- INTRODUCTION -->
+    <!-- =====================================
+         INTRODUCTION
+    ====================================== -->
+
     <div class="about-intro">
+
       <div class="intro-content">
+
         <span class="intro-label">
           Mon parcours
         </span>
@@ -73,78 +130,130 @@ const projets = [
           <strong>informatique de gestion</strong>,
           je construis progressivement mon expérience
           dans le développement web frontend et backend.
-          Je m'intéresse particulièrement aux applications
-          métier, aux tableaux de bord et aux plateformes
-          qui facilitent le quotidien des utilisateurs.
+
+          Je m'intéresse particulièrement aux
+          applications métier, aux tableaux de bord
+          et aux plateformes qui facilitent
+          le quotidien des utilisateurs.
         </p>
 
         <p>
           Grâce à mon stage professionnel et à mes
           projets personnels, j'ai acquis une expérience
           pratique en développement d'interfaces,
-          intégration d'API REST, gestion de données
-          et déploiement d'applications web.
+          conception et intégration d'API REST,
+          gestion de données, débogage et
+          déploiement d'applications web.
         </p>
+
+        <p>
+          J'ai notamment développé des applications
+          avec
+          <strong>Vue.js, Angular et React</strong>,
+          en utilisant TypeScript pour structurer
+          et fiabiliser mon code.
+
+          Mes projets sont accessibles en ligne
+          et plusieurs disposent d'un dépôt
+          GitHub public.
+        </p>
+
       </div>
 
+      <!-- INDICATEURS -->
+
       <div class="intro-highlights">
+
         <div class="highlight-item">
-          <span class="highlight-number">300 h</span>
+          <span class="highlight-number">
+            300 h
+          </span>
+
           <span class="highlight-label">
             Stage professionnel
           </span>
         </div>
 
         <div class="highlight-item">
-          <span class="highlight-number">3</span>
+          <span class="highlight-number">
+            4
+          </span>
+
           <span class="highlight-label">
-            Projets personnels réalisés
+            Projets présentés dans mon portfolio
           </span>
         </div>
 
         <div class="highlight-item">
-          <span class="highlight-number">2</span>
+          <span class="highlight-number">
+            3
+          </span>
+
           <span class="highlight-label">
-            Frameworks frontend pratiqués
+            Frameworks et bibliothèques frontend pratiqués
           </span>
         </div>
+
       </div>
     </div>
 
-    <!-- TROIS CARTES PRINCIPALES -->
+    <!-- =====================================
+         TROIS CARTES PRINCIPALES
+    ====================================== -->
+
     <div class="about-grid">
 
-      <!-- CARTE 1 : COMPÉTENCES -->
+      <!-- ===================================
+           CARTE 1 : COMPÉTENCES
+      ==================================== -->
+
       <article class="about-card card">
+
         <div class="card-top">
-          <span class="card-number">01</span>
-          <span class="card-category">Développement</span>
+          <span class="card-number">
+            01
+          </span>
+
+          <span class="card-category">
+            Développement
+          </span>
         </div>
 
-        <h3>Mon profil technique</h3>
+        <h3>
+          Mon profil technique
+        </h3>
 
         <p>
-          Je développe des applications web en utilisant
-          principalement
-          <strong>Vue.js 3, Angular et TypeScript</strong>
+          Je développe des applications web
+          modernes avec
+          <strong>
+            Vue.js 3, Angular, React et TypeScript
+          </strong>
           pour la partie frontend.
+        </p>
+
+        <p>
+          J'utilise les composants réutilisables,
+          la gestion d'état, les formulaires,
+          la navigation et les appels API
+          pour créer des interfaces
+          interactives et responsives.
         </p>
 
         <p>
           Pour le backend, je travaille avec
           <strong>Node.js et Express.js</strong>,
-          notamment pour concevoir et utiliser
-          des API REST connectées à des bases
-          de données.
+          notamment pour concevoir des API REST
+          et communiquer avec des bases de données.
         </p>
 
         <p>
-          Mon projet
-          <strong>Gestionnaire de candidatures</strong>
-          m'a permis de mettre en pratique
-          Angular Signals, les formulaires réactifs,
-          la gestion d'état et les interfaces
-          dynamiques.
+          Mes projets m'ont permis de pratiquer
+          différentes approches :
+          <strong>Angular Signals</strong>,
+          les hooks React, les services API,
+          les fonctions serverless Netlify
+          et la persistance avec localStorage.
         </p>
 
         <h4 class="card-subtitle">
@@ -160,20 +269,37 @@ const projets = [
             {{ tech }}
           </span>
         </div>
+
       </article>
 
-      <!-- CARTE 2 : EXPÉRIENCE -->
+      <!-- ===================================
+           CARTE 2 : EXPÉRIENCE
+      ==================================== -->
+
       <article class="about-card card">
+
         <div class="card-top">
-          <span class="card-number">02</span>
-          <span class="card-category">Expérience</span>
+          <span class="card-number">
+            02
+          </span>
+
+          <span class="card-category">
+            Expérience
+          </span>
         </div>
 
-        <h3>Mon expérience professionnelle</h3>
+        <h3>
+          Mon expérience professionnelle
+        </h3>
 
         <div class="experience-heading">
-          <strong>Tite Live SA</strong>
-          <span>Stage professionnel · 300 heures</span>
+          <strong>
+            Tite Live SA
+          </strong>
+
+          <span>
+            Stage professionnel · 300 heures
+          </span>
         </div>
 
         <p>
@@ -185,8 +311,11 @@ const projets = [
 
         <p>
           Cette expérience m'a permis de travailler
-          avec <strong>Vue.js, TypeScript,
-          Node.js et Express.js</strong>,
+          avec
+          <strong>
+            Vue.js, TypeScript,
+            Node.js et Express.js
+          </strong>,
           et d'approfondir ma compréhension
           des API REST et des bases de données
           <strong>MySQL et Firebird</strong>.
@@ -213,16 +342,28 @@ const projets = [
             {{ outil }}
           </span>
         </div>
+
       </article>
 
-      <!-- CARTE 3 : PROJETS -->
+      <!-- ===================================
+           CARTE 3 : PROJETS
+      ==================================== -->
+
       <article class="about-card card">
+
         <div class="card-top">
-          <span class="card-number">03</span>
-          <span class="card-category">Réalisations</span>
+          <span class="card-number">
+            03
+          </span>
+
+          <span class="card-category">
+            Réalisations
+          </span>
         </div>
 
-        <h3>Mes projets personnels</h3>
+        <h3>
+          Mes projets personnels
+        </h3>
 
         <p>
           Je développe des projets concrets
@@ -232,6 +373,7 @@ const projets = [
         </p>
 
         <div class="projects-mini-list">
+
           <a
             v-for="projet in projets"
             :key="projet.nom"
@@ -241,8 +383,12 @@ const projets = [
             class="mini-project"
             :aria-label="`Découvrir le projet ${projet.nom}`"
           >
+
             <div class="mini-project-heading">
-              <strong>{{ projet.nom }}</strong>
+              <strong>
+                {{ projet.nom }}
+              </strong>
+
               <span
                 class="project-arrow"
                 aria-hidden="true"
@@ -258,21 +404,30 @@ const projets = [
             <p>
               {{ projet.description }}
             </p>
+
           </a>
         </div>
 
         <p class="privacy-note">
-          Les démonstrations présentées utilisent
-          des données fictives ou personnelles
-          et respectent la confidentialité
+          Les démonstrations présentées
+          sont des projets personnels ou de
+          démonstration et ne donnent pas
+          accès aux données confidentielles
           des environnements professionnels.
         </p>
+
       </article>
+
     </div>
 
-    <!-- OBJECTIF PROFESSIONNEL -->
+    <!-- =====================================
+         OBJECTIF PROFESSIONNEL
+    ====================================== -->
+
     <div class="about-objective">
+
       <div class="objective-content">
+
         <span class="objective-label">
           Mon objectif professionnel
         </span>
@@ -284,19 +439,27 @@ const projets = [
 
         <p>
           Je recherche une opportunité en tant que
-          <strong>développeur web junior,
-          frontend ou fullstack</strong>,
+          <strong>
+            développeur web junior,
+            frontend ou fullstack
+          </strong>,
           afin de mettre mes compétences en pratique,
           contribuer à des projets concrets
           et évoluer auprès de développeurs expérimentés.
         </p>
 
         <p>
-          Je souhaite également poursuivre
-          mon apprentissage de
-          <strong>React</strong>
-          à travers un prochain projet personnel.
+          Mes réalisations avec
+          <strong>
+            Vue.js, Angular et React
+          </strong>
+          illustrent ma capacité à découvrir
+          différents environnements techniques,
+          intégrer des services externes
+          et mener des projets jusqu'à leur
+          déploiement en ligne.
         </p>
+
       </div>
 
       <a
@@ -305,9 +468,14 @@ const projets = [
         aria-label="Accéder à la section contact"
       >
         Me contacter
-        <span aria-hidden="true">↗</span>
+
+        <span aria-hidden="true">
+          ↗
+        </span>
       </a>
+
     </div>
+
   </section>
 </template>
 
@@ -326,7 +494,9 @@ const projets = [
 
 .about-intro {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 1fr);
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(260px, 1fr);
   align-items: center;
   gap: 36px;
 
@@ -336,12 +506,11 @@ const projets = [
   border: 1px solid var(--border-color, #334155);
   border-radius: 20px;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(139, 92, 246, 0.09),
-      rgba(139, 92, 246, 0.02)
-    );
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.09),
+    rgba(139, 92, 246, 0.02)
+  );
 }
 
 .intro-content {
@@ -362,7 +531,6 @@ const projets = [
 
 .intro-content h3 {
   margin: 0 0 20px;
-
   color: var(--text-primary, #f8fafc);
   font-size: clamp(1.4rem, 2.5vw, 2rem);
   line-height: 1.35;
@@ -374,7 +542,6 @@ const projets = [
 
 .intro-content p {
   margin: 0 0 14px;
-
   color: var(--text-muted, #94a3b8);
   font-size: 0.95rem;
   line-height: 1.85;
@@ -462,15 +629,12 @@ const projets = [
 
 .about-card:hover {
   transform: translateY(-5px);
-
   border-color: rgba(139, 92, 246, 0.4);
-
-  box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* ==========================================
-   EN-TÊTE CARTES
+   EN-TÊTE DES CARTES
 ========================================== */
 
 .card-top {
@@ -479,7 +643,6 @@ const projets = [
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
-
   margin-bottom: 4px;
 }
 
@@ -492,7 +655,6 @@ const projets = [
   height: 46px;
 
   border-radius: 12px;
-
   background: rgba(139, 92, 246, 0.12);
   border: 1px solid rgba(139, 92, 246, 0.2);
 
@@ -505,7 +667,6 @@ const projets = [
   padding: 7px 12px;
 
   border-radius: 999px;
-
   background: rgba(139, 92, 246, 0.08);
   border: 1px solid rgba(139, 92, 246, 0.17);
 
@@ -520,7 +681,6 @@ const projets = [
 
 .about-card h3 {
   margin: 0;
-
   color: var(--text-primary, #f8fafc);
   font-size: 1.2rem;
   font-weight: 700;
@@ -539,7 +699,6 @@ const projets = [
 
 .about-card p {
   margin: 0;
-
   color: var(--text-muted, #94a3b8);
   font-size: 0.93rem;
   line-height: 1.8;
@@ -558,14 +717,12 @@ const projets = [
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-
   margin-top: 2px;
 }
 
 .technology-badge {
   display: inline-flex;
   align-items: center;
-
   padding: 7px 11px;
 
   background: rgba(139, 92, 246, 0.1);
@@ -592,7 +749,6 @@ const projets = [
   display: flex;
   flex-direction: column;
   gap: 6px;
-
   padding: 14px 16px;
 
   background: rgba(139, 92, 246, 0.07);
@@ -624,12 +780,10 @@ const projets = [
   display: flex;
   flex-direction: column;
   gap: 7px;
-
   padding: 15px;
 
   border: 1px solid rgba(139, 92, 246, 0.2);
   border-radius: 12px;
-
   background: rgba(139, 92, 246, 0.055);
 
   text-decoration: none;
@@ -677,7 +831,6 @@ const projets = [
 
 .mini-project p {
   margin: 0;
-
   color: var(--text-muted, #94a3b8);
   font-size: 0.82rem;
   line-height: 1.65;
@@ -686,9 +839,7 @@ const projets = [
 .privacy-note {
   margin-top: auto !important;
   padding-top: 14px;
-
   border-top: 1px solid rgba(148, 163, 184, 0.15);
-
   font-size: 0.8rem !important;
   font-style: italic;
 }
@@ -706,12 +857,11 @@ const projets = [
   margin-top: 28px;
   padding: 30px 32px;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(139, 92, 246, 0.13),
-      rgba(15, 23, 42, 0.25)
-    );
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.13),
+    rgba(15, 23, 42, 0.25)
+  );
 
   border: 1px solid rgba(139, 92, 246, 0.25);
   border-radius: 18px;
@@ -723,7 +873,6 @@ const projets = [
 
 .objective-content h3 {
   margin: 0 0 14px;
-
   color: var(--text-primary, #f8fafc);
   font-size: clamp(1.25rem, 2.5vw, 1.65rem);
   line-height: 1.4;
@@ -731,7 +880,6 @@ const projets = [
 
 .objective-content p {
   margin: 0 0 12px;
-
   color: var(--text-muted, #94a3b8);
   font-size: 0.92rem;
   line-height: 1.8;
@@ -755,11 +903,9 @@ const projets = [
   align-items: center;
   justify-content: center;
   gap: 12px;
-
   flex-shrink: 0;
 
   padding: 13px 20px;
-
   color: #ffffff;
   background: #7c3aed;
 
@@ -780,9 +926,7 @@ const projets = [
 .objective-button:hover {
   background: #8b5cf6;
   transform: translateY(-2px);
-
-  box-shadow:
-    0 6px 20px rgba(124, 58, 237, 0.22);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.22);
 }
 
 .objective-button:focus-visible {
@@ -795,16 +939,13 @@ const projets = [
 ========================================== */
 
 @media (max-width: 1050px) {
-
   .about-intro {
     grid-template-columns: 1fr;
   }
 
   .intro-highlights {
-    grid-template-columns: repeat(
-      3,
-      minmax(0, 1fr)
-    );
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
   }
 
   .highlight-item:first-child {
@@ -812,16 +953,13 @@ const projets = [
   }
 
   .about-grid {
-    grid-template-columns: repeat(
-      2,
-      minmax(0, 1fr)
-    );
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 
   .about-card:last-child {
     grid-column: 1 / -1;
   }
-
 }
 
 /* ==========================================
@@ -829,7 +967,6 @@ const projets = [
 ========================================== */
 
 @media (max-width: 680px) {
-
   .about-intro {
     padding: 22px;
     gap: 24px;
@@ -869,14 +1006,12 @@ const projets = [
     flex-direction: column;
     align-items: flex-start;
     gap: 22px;
-
     padding: 24px 22px;
   }
 
   .objective-button {
     width: 100%;
   }
-
 }
 
 /* ==========================================
@@ -884,7 +1019,6 @@ const projets = [
 ========================================== */
 
 @media (prefers-reduced-motion: reduce) {
-
   .about-card,
   .mini-project,
   .objective-button {
@@ -896,6 +1030,5 @@ const projets = [
   .objective-button:hover {
     transform: none;
   }
-
 }
 </style>
