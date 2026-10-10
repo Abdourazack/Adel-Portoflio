@@ -79,7 +79,7 @@ export const projects: ProjectItem[] = [
     demoUrl:
       'https://djicitoyen.netlify.app/',
 
-    githubUrl: '#',
+    githubUrl: 'https://github.com/Abdourazack/djicitoyen',
 
     description:
       'Plateforme web de gestion des démarches administratives, permettant aux citoyens de consulter les services, de demander des rendez-vous et de suivre leurs dossiers. Elle comprend également des interfaces dédiées aux agents et aux administrateurs.',
