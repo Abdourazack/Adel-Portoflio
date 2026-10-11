@@ -3,7 +3,10 @@
 import { computed } from 'vue'
 import { projects } from '../../data/projects'
 
-// Compétences affichées dans la page d'accueil
+// ==========================================
+// COMPÉTENCES PRINCIPALES
+// ==========================================
+
 const mainSkills = [
   'HTML5',
   'CSS3',
@@ -12,13 +15,16 @@ const mainSkills = [
   'Vue.js 3',
   'Angular',
   'React',
-  'NestJS',
   'Vite',
   'Pinia',
   'Vue Router',
+  'Angular Signals',
+  'RxJS',
+  'React Hooks',
+  'React Router',
   'Node.js',
   'Express.js',
-  'REST API',
+  'API REST',
   'SQL',
   'MySQL',
   'MariaDB',
@@ -28,11 +34,33 @@ const mainSkills = [
   'Git',
   'GitHub',
   'Postman',
-  'Docker',
+  'Docker — notions',
   'Linux',
 ]
 
-// Vérifier si un projet est encore à venir
+const highlightedSkills = [
+  'Vue.js 3',
+  'Angular',
+  'React',
+  'TypeScript',
+  'Node.js',
+  'Express.js',
+]
+
+// ==========================================
+// CV TÉLÉCHARGEABLE
+// Le PDF doit être dans le dossier public
+// ==========================================
+
+const cvFileName =
+  'CV_Adel_Abdourazack_Developpeur_Web.pdf'
+
+const cvUrl = `/${cvFileName}`
+
+// ==========================================
+// GESTION DES PROJETS
+// ==========================================
+
 function isPlannedProject(project: {
   type: string
   demoUrl: string
@@ -42,11 +70,11 @@ function isPlannedProject(project: {
   return (
     type.includes('venir') ||
     type.includes('prévu') ||
+    !project.demoUrl ||
     project.demoUrl === '#'
   )
 }
 
-// Récupération des projets
 const projectPreviews = computed(() =>
   projects.map((project) => ({
     ...project,
@@ -54,21 +82,22 @@ const projectPreviews = computed(() =>
   }))
 )
 
-// Compter les projets existants
 const existingProjectsCount = computed(() =>
   projectPreviews.value.filter(
     (project) => !project.isPlanned
   ).length
 )
 
-// Compter les futurs projets
 const plannedProjectsCount = computed(() =>
   projectPreviews.value.filter(
     (project) => project.isPlanned
   ).length
 )
 
-// Navigation vers une section
+// ==========================================
+// NAVIGATION
+// ==========================================
+
 function scrollToSection(id: string) {
   const section = document.getElementById(id)
 
@@ -90,16 +119,24 @@ function scrollToSection(id: string) {
     class="hero section"
     aria-labelledby="hero-title"
   >
-    <!-- PRÉSENTATION -->
+    <!-- =====================================
+         COLONNE GAUCHE
+    ====================================== -->
+
     <div class="hero-content">
+
+      <!-- DISPONIBILITÉ -->
 
       <div class="availability-badge">
         <span
           class="availability-dot"
           aria-hidden="true"
         ></span>
+
         À la recherche d'une opportunité junior
       </div>
+
+      <!-- TITRE -->
 
       <p class="hero-eyebrow">
         DÉVELOPPEMENT WEB • FRONTEND & BACKEND
@@ -113,6 +150,8 @@ function scrollToSection(id: string) {
         <span>Fullstack Junior</span>
       </h1>
 
+      <!-- PRÉSENTATION -->
+
       <p class="hero-intro">
         Je transforme des besoins concrets en
         <strong>
@@ -121,19 +160,21 @@ function scrollToSection(id: string) {
       </p>
 
       <p class="hero-description">
-        Je conçois des applications web, des interfaces
-        responsives et des API REST.
-
+        Je développe des applications web,
+        des interfaces responsives et des API REST.
         Ma stack principale repose sur Vue.js 3,
         TypeScript, Node.js et Express.js.
-
-        Je développe également mes compétences
-        sur différentes technologies frontend,
-        backend et bases de données.
+        J'ai également réalisé des projets
+        avec Angular et React.
       </p>
 
-      <!-- BOUTONS -->
+      <!-- =====================================
+           TROIS BOUTONS
+      ====================================== -->
+
       <div class="hero-actions">
+
+        <!-- VOIR MES PROJETS -->
 
         <button
           type="button"
@@ -144,6 +185,8 @@ function scrollToSection(id: string) {
           <span aria-hidden="true">↗</span>
         </button>
 
+        <!-- ME CONTACTER -->
+
         <button
           type="button"
           class="btn btn-secondary"
@@ -153,36 +196,42 @@ function scrollToSection(id: string) {
           <span aria-hidden="true">→</span>
         </button>
 
+        <!-- TÉLÉCHARGER MON CV -->
+
+        <a
+          :href="cvUrl"
+          :download="cvFileName"
+          class="btn btn-secondary cv-download"
+          aria-label="Télécharger mon CV au format PDF"
+        >
+          Télécharger mon CV
+          <span aria-hidden="true">↓</span>
+        </a>
+
       </div>
 
-      <!-- COMPÉTENCES -->
-      <div class="skills-block">
+      <!-- =====================================
+           COMPÉTENCES TECHNIQUES
+      ====================================== -->
 
+      <div class="skills-block">
         <div class="block-heading">
           <h2>Mes compétences techniques</h2>
           <span>Langages, frameworks et outils</span>
         </div>
 
         <div class="hero-stack">
-
           <span
             v-for="skill in mainSkills"
             :key="skill"
             class="skill-pill"
             :class="{
-              'skill-highlight': [
-                'Vue.js 3',
-                'Angular',
-                'React',
-                'NestJS',
-                'TypeScript',
-                'Node.js'
-              ].includes(skill)
+              'skill-highlight':
+                highlightedSkills.includes(skill),
             }"
           >
             {{ skill }}
           </span>
-
         </div>
 
         <p class="skills-description">
@@ -191,10 +240,12 @@ function scrollToSection(id: string) {
           bases de données et déploiement
           d'applications web.
         </p>
-
       </div>
 
-      <!-- CHIFFRES CLÉS -->
+      <!-- =====================================
+           CHIFFRES CLÉS
+      ====================================== -->
+
       <div class="hero-highlights">
 
         <div class="highlight-item">
@@ -226,10 +277,14 @@ function scrollToSection(id: string) {
 
     </div>
 
-    <!-- DASHBOARD DE PRÉSENTATION -->
+    <!-- =====================================
+         COLONNE DROITE — DASHBOARD
+    ====================================== -->
+
     <div class="hero-visual card">
 
-      <!-- EN-TÊTE -->
+      <!-- EN-TÊTE DU DASHBOARD -->
+
       <div class="dashboard-header">
 
         <div
@@ -256,6 +311,7 @@ function scrollToSection(id: string) {
       </div>
 
       <!-- INTRODUCTION -->
+
       <div class="visual-heading">
 
         <p class="visual-eyebrow">
@@ -268,50 +324,73 @@ function scrollToSection(id: string) {
 
         <p>
           Des applications fullstack,
-          plusieurs technologies
+          trois technologies frontend
           et des projets variés.
         </p>
 
       </div>
 
-      <!-- CARTES TECHNIQUES -->
+      <!-- =====================================
+           CARTES TECHNIQUES
+      ====================================== -->
+
       <div class="dashboard-grid">
 
         <div class="dashboard-card">
           <small>Frontend</small>
-          <strong>Vue.js • Angular • React</strong>
+
+          <strong>
+            Vue.js • Angular • React
+          </strong>
+
           <span>
-            JavaScript, TypeScript, HTML et CSS
+            JavaScript, TypeScript,
+            HTML et CSS
           </span>
         </div>
 
         <div class="dashboard-card">
           <small>Backend</small>
-          <strong>Node.js • Express • NestJS</strong>
+
+          <strong>
+            Node.js • Express.js
+          </strong>
+
           <span>
-            API REST et logique serveur
+            API REST, JWT et logique serveur
           </span>
         </div>
 
         <div class="dashboard-card">
           <small>Bases de données</small>
+
           <strong>SQL / NoSQL</strong>
+
           <span>
-            MySQL, MariaDB, Firebird et MongoDB
+            MySQL, MariaDB,
+            Firebird et MongoDB
           </span>
         </div>
 
         <div class="dashboard-card">
           <small>Outils & déploiement</small>
-          <strong>Git • GitHub • Docker</strong>
+
+          <strong>
+            Git • GitHub • Netlify
+          </strong>
+
           <span>
-            Postman, Netlify et Render
+            Postman, Render
+            et Docker — notions
           </span>
         </div>
 
       </div>
 
-      <!-- PROJETS -->
+      <!-- =====================================
+           PRÉSENTATION DES PROJETS
+      ====================================== -->
+
       <div class="projects-preview">
 
         <div class="preview-header">
@@ -329,7 +408,8 @@ function scrollToSection(id: string) {
             :key="project.title"
           >
 
-            <!-- PROJET DISPONIBLE -->
+            <!-- PROJET EN LIGNE -->
+
             <a
               v-if="!project.isPlanned"
               :href="project.demoUrl"
@@ -366,6 +446,7 @@ function scrollToSection(id: string) {
             </a>
 
             <!-- PROJET À VENIR -->
+
             <div
               v-else
               class="fake-row planned-row"
@@ -405,15 +486,14 @@ function scrollToSection(id: string) {
       </div>
 
       <!-- PIED DU DASHBOARD -->
-      <div class="dashboard-footer">
 
+      <div class="dashboard-footer">
         <span
           class="footer-dot"
           aria-hidden="true"
         ></span>
 
-        Vue.js • TypeScript • Node.js • Express.js
-
+        Vue.js • Angular • React • TypeScript • Node.js
       </div>
 
     </div>
@@ -422,7 +502,9 @@ function scrollToSection(id: string) {
 </template>
 
 <style scoped>
-/* STRUCTURE GÉNÉRA */
+/* ==========================================
+   STRUCTURE PRINCIPALE
+========================================== */
 
 .hero {
   display: grid;
@@ -440,7 +522,9 @@ function scrollToSection(id: string) {
   min-width: 0;
 }
 
-/* BADGE DISPONIBILITÉ */
+/* ==========================================
+   BADGE DISPONIBILITÉ
+========================================== */
 
 .availability-badge {
   display: inline-flex;
@@ -467,7 +551,9 @@ function scrollToSection(id: string) {
   box-shadow: 0 0 12px rgba(74, 222, 128, 0.45);
 }
 
-/* TITRE */
+/* ==========================================
+   TITRES
+========================================== */
 
 .hero-eyebrow {
   margin-top: 28px;
@@ -488,19 +574,23 @@ function scrollToSection(id: string) {
 
 .hero-title span {
   display: block;
+
   background: linear-gradient(
     135deg,
     #ffffff,
     #a5b4fc 45%,
     #a78bfa
   );
+
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
-/* DESCRIPTION */
+/* ==========================================
+   DESCRIPTION
+========================================== */
 
 .hero-intro {
   max-width: 670px;
@@ -521,7 +611,9 @@ function scrollToSection(id: string) {
   line-height: 1.85;
 }
 
-/* BOUTONS */
+/* ==========================================
+   BOUTONS
+========================================== */
 
 .hero-actions {
   display: flex;
@@ -539,13 +631,47 @@ function scrollToSection(id: string) {
   gap: 12px;
   padding: 12px 22px;
   cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 .hero-actions .btn span {
   font-size: 1.1rem;
 }
 
-/* COMPÉTENCES */
+/* ==========================================
+   BOUTON TÉLÉCHARGEMENT DU CV
+========================================== */
+
+.cv-download {
+  border: 1px solid rgba(167, 139, 250, 0.5);
+  border-radius: 10px;
+  background: rgba(139, 92, 246, 0.12);
+  color: #ddd6fe;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cv-download:hover {
+  background: rgba(139, 92, 246, 0.22);
+  border-color: #a78bfa;
+  transform: translateY(-2px);
+}
+
+.cv-download:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   COMPÉTENCES
+========================================== */
 
 .skills-block {
   margin-top: 34px;
@@ -584,6 +710,7 @@ function scrollToSection(id: string) {
   color: var(--text-soft);
   font-size: 0.8rem;
   font-weight: 500;
+
   transition:
     border-color 0.2s ease,
     background 0.2s ease;
@@ -593,8 +720,6 @@ function scrollToSection(id: string) {
   border-color: rgba(167, 139, 250, 0.5);
   background: rgba(139, 92, 246, 0.12);
 }
-
-/* TECHNOLOGIES MISES EN AVANT */
 
 .skill-highlight {
   border-color: rgba(167, 139, 250, 0.45);
@@ -609,7 +734,9 @@ function scrollToSection(id: string) {
   line-height: 1.7;
 }
 
-/* INDICATEURS */
+/* ==========================================
+   CHIFFRES CLÉS
+========================================== */
 
 .hero-highlights {
   display: flex;
@@ -641,7 +768,9 @@ function scrollToSection(id: string) {
   background: var(--border-color);
 }
 
-/* DASHBOARD */
+/* ==========================================
+   DASHBOARD
+========================================== */
 
 .hero-visual {
   min-width: 0;
@@ -696,7 +825,9 @@ function scrollToSection(id: string) {
   font-size: 0.75rem;
 }
 
-/* EN-TÊTE DU DASHBOARD */
+/* ==========================================
+   INTRODUCTION DU DASHBOARD
+========================================== */
 
 .visual-heading {
   margin: 23px 0;
@@ -722,12 +853,13 @@ function scrollToSection(id: string) {
   line-height: 1.6;
 }
 
-/* CARTES TECHNIQUES */
+/* ==========================================
+   CARTES TECHNIQUES
+========================================== */
 
 .dashboard-grid {
   display: grid;
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -759,7 +891,9 @@ function scrollToSection(id: string) {
   line-height: 1.45;
 }
 
-/* PROJETS */
+/* ==========================================
+   LISTE DES PROJETS
+========================================== */
 
 .projects-preview {
   margin-top: 24px;
@@ -802,6 +936,7 @@ function scrollToSection(id: string) {
 .project-link {
   color: inherit;
   text-decoration: none;
+
   transition:
     border-color 0.2s ease,
     background 0.2s ease;
@@ -860,8 +995,6 @@ function scrollToSection(id: string) {
   line-height: 1.4;
 }
 
-/* STATUTS */
-
 .project-status {
   flex-shrink: 0;
   padding: 6px 9px;
@@ -880,7 +1013,9 @@ function scrollToSection(id: string) {
   color: #c4b5fd;
 }
 
-/* PIED */
+/* ==========================================
+   PIED DU DASHBOARD
+========================================== */
 
 .dashboard-footer {
   display: flex;
@@ -893,7 +1028,9 @@ function scrollToSection(id: string) {
   font-size: 0.72rem;
 }
 
-/* RESPONSIVE TABLETTE */
+/* ==========================================
+   RESPONSIVE TABLETTE
+========================================== */
 
 @media (max-width: 1100px) {
   .hero {
@@ -907,7 +1044,9 @@ function scrollToSection(id: string) {
   }
 }
 
-/* RESPONSIVE MOBILE */
+/* ==========================================
+   RESPONSIVE MOBILE
+========================================== */
 
 @media (max-width: 640px) {
   .hero {
@@ -980,12 +1119,19 @@ function scrollToSection(id: string) {
   }
 }
 
-/* ACCESSIBILITÉ */
+/* ==========================================
+   ACCESSIBILITÉ
+========================================== */
 
 @media (prefers-reduced-motion: reduce) {
   .skill-pill,
-  .project-link {
+  .project-link,
+  .cv-download {
     transition: none;
+  }
+
+  .cv-download:hover {
+    transform: none;
   }
 }
 </style>
